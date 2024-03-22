@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "overpass-regular";
+  src: url(../fonts/overpass-regular.otf);
+}
+@font-face {
+  font-family: "overpass-bold";
+  src: url(../fonts/overpass-bold.otf);
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "overpass-regular";
+}
