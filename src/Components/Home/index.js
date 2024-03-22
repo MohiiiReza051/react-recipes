@@ -1,15 +1,15 @@
 import '../../styles/Home.css';
 import { useState } from 'react';
 import { useFetch } from '../../hooks/useFetch';
+import RecipeList from './RecipeList';
 
 const Home = () =>
 {
-  const [url, setUrl] = useState('http://localhost:3000/recipes');
-  const {isLoading, err, resJson: recipes} = useFetch(url);
+  const {isLoading, err, resJson: recipes} = useFetch('http://localhost:3000/recipes');
 
   return (
-    <div>
-            
+    <div className='recipes-list'>
+      { recipes && recipes.map(r => <RecipeList key={r.id} recipe={r} /> )} 
     </div>
   )
 }

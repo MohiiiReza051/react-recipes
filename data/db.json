@@ -10,7 +10,7 @@
                 "300ml Veg stock"
             ],
             "method": "1. Preheat the oven and then combine the ingredients in a baking tray with various vegetables and spices of your choice. Bake it in the oven until cooked and it gives off a delicious aroma. Transfer the mixture to the bottom of a pot and heat it with some broth. After a while, cook it with more spices and garnish with vegetables. Enjoy!",
-            "cooking Time": "45 minutes"
+            "cookingTime": "45 minutes"
         },
         {
             "id": "2",
@@ -22,7 +22,7 @@
                 "50g Parmesan Cheese"
             ],
             "method": "1. Cook the spaghetti in a pot of boiling water until al dente. In a separate pan, cook the pancetta until crispy. In a bowl, whisk together the eggs and Parmesan cheese. Drain the spaghetti and toss it in the egg mixture. Add the crispy pancetta on top and serve hot.",
-            "cooking Time": "20 minutes"
+            "cookingTime": "20 minutes"
         },
         {
             "id": "3",
@@ -35,7 +35,7 @@
                 "Curry Powder"
             ],
             "method": "1. Cut the chicken into bite-sized pieces and sauté with chopped onion and garlic until browned. Add curry powder and stir well. Pour in the coconut milk and simmer until the chicken is cooked through. Serve hot with rice or naan bread.",
-            "cooking Time": "30 minutes"
+            "cookingTime": "30 minutes"
         },
         {
             "id": "4",
@@ -47,7 +47,7 @@
                 "Fresh Basil Leaves"
             ],
             "method": "1. Roll out the pizza dough into a round shape. Spread tomato sauce over the dough evenly. Tear the fresh mozzarella cheese and place it on top. Bake in the oven until the crust is golden and the cheese is melted. Garnish with fresh basil leaves before serving.",
-            "cooking Time": "25 minutes"
+            "cookingTime": "25 minutes"
         },
         {
             "id": "5",
@@ -60,7 +60,7 @@
                 "1 tsp Baking Powder"
             ],
             "method": "1. Mash the ripe bananas in a bowl. Add eggs, flour, sugar, and baking powder. Mix until well combined. Pour the mixture into a greased loaf pan. Bake in the oven until a toothpick inserted in the center comes out clean. Let it cool before slicing and serving.",
-            "cooking Time": "50 minutes"
+            "cookingTime": "50 minutes"
         }        
     ]    
 }

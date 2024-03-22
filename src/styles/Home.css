@@ -1,0 +1,44 @@
+.recipes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+.recipes-list .card {
+    width: 350px;
+    height: 220px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    background-color: var(--white);
+    transition: 0.4s;
+}
+.recipes-list .card:hover {
+    rotate: 1deg;
+}
+.recipes-list .card .title {
+    color: #555;
+}
+.recipes-list .card .time-required {
+    color: #acacac;
+}
+.recipes-list .card .method {
+    margin-top: 15px;
+    color: #c4c4c4;
+}
+.recipes-list .card button {
+    display: block;
+    color: #7f7e7e;
+    background-color: #ebebeb;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 0 auto;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.recipes-list .card button:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
