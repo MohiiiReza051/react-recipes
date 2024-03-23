@@ -21,3 +21,43 @@ body {
   font-family: "overpass-regular";
   background-color: #d1d1d1;
 }
+
+@media (max-width: 1350px) {
+  .recipes-list {
+      max-width: 750px;
+      grid-template-columns: 1fr 1fr;
+  }
+  .icons-con {
+      max-width: 750px;
+  }
+}
+@media (max-width: 900px) {
+  .recipes-list {
+      max-width: 350px;
+      grid-template-columns: 1fr;
+  }
+  .icons-con {
+      max-width: 350px;
+  }
+}
+@media (max-width: 700px) {
+  .nav-con {
+      flex-direction: column;
+      height: 250px !important;
+      gap: 20px;
+  }
+  .nav-con form {
+    flex-direction: column;
+  }
+  .nav-con .page-title {
+      margin-top: 20px;
+  }
+  .nav-con .search-field {
+    width: 150px;
+  }
+  .nav-con input[type="button"] {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
