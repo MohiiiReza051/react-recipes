@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const RecipeList = ({ recipe }) =>
 {
   return (
@@ -12,7 +14,9 @@ const RecipeList = ({ recipe }) =>
           {`${recipe.method.substring(0, 100)}...`}
         </p>
         <button>
-          Cook This
+          <Link to={`/recipes/${recipe.id}`}>
+            Cook This
+          </Link>
         </button>
       </div>
   )
