@@ -9,14 +9,14 @@ const Home = () =>
 
   return (
     <>
-      <div className="icons-con">
+      {/* <div className="icons-con">
         <i className='bx bx-moon'></i>
         <div className="solid-circles">
           <div className="purple"></div>
           <div className="green"></div>
           <div className="red"></div>
         </div>
-      </div>
+      </div> */}
       <div className='recipes-list'>
         { recipes && recipes.map(r => <RecipeList key={r.id} recipe={r} /> )} 
       </div>
