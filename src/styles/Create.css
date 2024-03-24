@@ -1,0 +1,53 @@
+.create-con {
+    max-width: 350px;
+    margin: 40px auto;
+}
+.create-con .title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.create-con form {
+    padding: 20px;
+}
+.create-con label {
+    color: rgb(98, 98, 98);
+    font-size: 20px;
+}
+.create-con input {
+    padding: 8px 10px;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 3px;
+}
+.recipe-ingredients {
+    width: 75% !important;
+}
+.create-con input[type="button"], .create-con .submit-btn {
+    width: 23%;
+    padding: 8px 10px;
+    margin-left: 2%;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: rgb(122, 0, 198);
+    color: var(--white);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.create-con input[type="button"]:hover, .create-con .submit-btn:hover {
+    background-color: rgb(65, 0, 105);
+}
+.create-con .show-ingredients {
+    width: 100%;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.3);
+}
+.create-con .recipe-method {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 8px 10px;
+}
+.create-con .submit-btn {
+    display: block;
+    margin: 20px auto !important;
+}

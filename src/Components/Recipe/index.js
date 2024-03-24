@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 const Recipe = () =>
 {
   const { id } = useParams();
-  const {isLoading, err, resJson: recipe} = useFetch(`http://localhost:3000/recipes/${id}`);
+  const [ isLoading, err, recipe ] = useFetch(`http://localhost:3000/recipes/${id}`);
 
   return (
     <RecipeDetail

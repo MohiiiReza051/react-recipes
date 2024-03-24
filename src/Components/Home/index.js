@@ -1,11 +1,10 @@
 import '../../styles/Home.css';
-import { useState } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import RecipeList from './RecipeList';
 
 const Home = () =>
 {
-  const {isLoading, err, resJson: recipes} = useFetch('http://localhost:3000/recipes');
+  const [ isLoading, err, recipes ] = useFetch('http://localhost:3000/recipes');
 
   return (
     <>

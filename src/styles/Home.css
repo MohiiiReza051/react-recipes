@@ -25,6 +25,7 @@
 .recipes-list .card .method {
     margin-top: 15px;
     color: #c4c4c4;
+    overflow-wrap: break-word;
 }
 .recipes-list .card button {
     display: block;

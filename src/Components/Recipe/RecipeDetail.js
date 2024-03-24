@@ -7,7 +7,7 @@ const RecipeDetail = ({ recipe, err, isLoading }) =>
             {recipe.title}
           </h1>
           <h2 className='time-required'>
-            {recipe.cookingTime} 
+            {recipe.cookingTime} minutes
           </h2>
           <h2 className="ingredients-text">
             ingredients:

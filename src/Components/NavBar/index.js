@@ -12,7 +12,7 @@ const NavBar = () =>
         <form onSubmit={e => e.preventDefault()}>
           <label htmlFor="search">Search: </label>
           <input type="text" className='search-field' name='search' />
-          <NavLink to={''}>
+          <NavLink to={'/create'}>
             <input type="button" value="Create Recipe" className='create-recipe-btn' />
           </NavLink>
         </form>

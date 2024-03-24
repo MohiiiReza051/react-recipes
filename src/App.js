@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Create from './Components/Create';
 import Home from './Components/Home';
 import NavBar from './Components/NavBar';
@@ -13,9 +13,10 @@ const App = () =>
         <NavBar />
         <ChangeTheme />
         <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/create' element={<Create />}/>
-          <Route path='/recipes/:id' element={<Recipe />}/>
+          <Route path='/' element={<Home />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/recipes/:id' element={<Recipe />} />
+          <Route path='/*' element={<Navigate to='/' />} />
         </Routes>
       </Router>  
   );
