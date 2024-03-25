@@ -7,6 +7,9 @@
     background-color: #673AB7;
     color: var(--white);
 }
+.nav-con .page-title a {
+    color: var(--white);
+}
 .nav-con .search-field {
     border: 2px solid var(--white);
     border-radius: 5px;
