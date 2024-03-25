@@ -7,7 +7,7 @@
 }
 .recipes-list .card {
     width: 350px;
-    height: 220px;
+    height: 245px;
     padding: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     background-color: var(--white);
@@ -15,6 +15,15 @@
 }
 .recipes-list .card:hover {
     rotate: 1deg;
+}
+.recipes-list .bxs-trash {
+    margin-left: 290px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.recipes-list .bxs-trash:hover {
+    scale: 1.1;
+    color: #ff0000;
 }
 .recipes-list .card .title {
     color: #555;

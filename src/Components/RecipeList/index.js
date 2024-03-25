@@ -1,12 +1,26 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../../styles/RecipeList.css'
 
 const RecipeList = ({ recipes }) =>
-{
+{  
+  const navigate = useNavigate();
+
+  const handleDeleteRecipe = async recipeId =>
+  {
+    await fetch(`http://localhost:3000/recipes/${recipeId}`, {
+      method: 'DELETE',
+      headers: {
+          'Content-Type': 'application/json'
+      }
+    })
+    window.location.reload();
+  }
+
   return (
     <div className="recipes-list">
       {recipes.map(r => (
         <div className="card" key={r.id}>
+          <i className='bx bxs-trash' onClick={() => handleDeleteRecipe(r.id)}></i>
           <h2 className="title">
             {r.title}
           </h2>

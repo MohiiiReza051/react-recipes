@@ -16,7 +16,6 @@ const Create = () =>
   const handleSubmitForm = e =>
   {
     e.preventDefault();
-    // console.log(ingredientsList.length > 0);
     if (ingredientsList.length > 0) {
       postData(newRecipe);
       setIsSend(true);
