@@ -22,6 +22,13 @@ body {
   font-family: "overpass-regular";
   background-color: #d1d1d1;
 }
+.recipes-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  margin: 50px auto;
+  max-width: 1200px;
+}
 
 @media (max-width: 1350px) {
   .recipes-list {

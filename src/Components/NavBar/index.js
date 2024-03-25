@@ -1,8 +1,16 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import '../../styles/NavBar.css';
 
 const NavBar = () =>
 {
+  const navigate = useNavigate();
+
+  const handleSearchField = e =>
+  {
+    if (e.key === 'Enter')
+      navigate(`/search/${e.target.value}`);
+  }
+
   return (
     <div className='nav-con'>
       <h1 className="page-title">
@@ -11,9 +19,14 @@ const NavBar = () =>
       <div className="right-side">
         <form onSubmit={e => e.preventDefault()}>
           <label htmlFor="search">Search: </label>
-          <input type="text" className='search-field' name='search' />
-          <NavLink to={'/create'}>
-            <input type="button" value="Create Recipe" className='create-recipe-btn' />
+          <input
+            type="text"
+            className='search-field'
+            name='search'
+            onKeyDown={e => handleSearchField(e)}
+          />
+          <NavLink to={'/create'} className='create-recipe-btn'>
+            Create Recipe
           </NavLink>
         </form>
       </div>

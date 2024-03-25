@@ -39,3 +39,10 @@
 .create-recipe-btn:hover {
     background-color: var(--black);
 }
+.nav-con .active {
+    color: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--white);
+    background-color: transparent;
+    cursor: default;
+}

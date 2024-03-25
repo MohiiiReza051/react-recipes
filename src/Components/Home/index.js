@@ -1,6 +1,5 @@
-import '../../styles/Home.css';
 import { useFetch } from '../../hooks/useFetch';
-import RecipeList from './RecipeList';
+import RecipeList from '../RecipeList';
 
 const Home = () =>
 {
@@ -8,9 +7,7 @@ const Home = () =>
 
   return (
     <>
-      <div className='recipes-list'>
-        { recipes && recipes.map(r => <RecipeList key={r.id} recipe={r} /> )} 
-      </div>
+      { recipes && <RecipeList recipes={recipes} /> } 
     </>
   )
 }
