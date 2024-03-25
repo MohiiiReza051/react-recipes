@@ -63,7 +63,7 @@ body {
   .nav-con .search-field {
     width: 150px;
   }
-  .nav-con input[type="button"] {
+  .nav-con .create-recipe-btn {
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;

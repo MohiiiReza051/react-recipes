@@ -1,5 +1,6 @@
 import { useFetch } from '../../hooks/useFetch';
 import RecipeList from '../RecipeList';
+import Loading from '../Loading';
 
 const Home = () =>
 {
@@ -7,7 +8,8 @@ const Home = () =>
 
   return (
     <>
-      { recipes && <RecipeList recipes={recipes} /> } 
+      { isLoading && <Loading /> } 
+      { recipes && <RecipeList recipes={recipes} /> }
     </>
   )
 }
