@@ -2,6 +2,7 @@ import '../../styles/RecipeDetail.css';
 import { useFetch } from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom';
 import Loading from '../Loading';
+import Error from '../Error';
 
 const RecipeDetail = () =>
 {
@@ -11,6 +12,7 @@ const RecipeDetail = () =>
   return (
     <>
       { isLoading && <Loading /> } 
+      { err && <Error /> } 
       {recipe && ( 
         <div className='recipe-con'>
           <h1 className="title">

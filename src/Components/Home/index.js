@@ -1,6 +1,7 @@
 import { useFetch } from '../../hooks/useFetch';
 import RecipeList from '../RecipeList';
 import Loading from '../Loading';
+import Error from '../Error';
 
 const Home = () =>
 {
@@ -9,6 +10,7 @@ const Home = () =>
   return (
     <>
       { isLoading && <Loading /> } 
+      { err && <Error /> } 
       { recipes && <RecipeList recipes={recipes} /> }
     </>
   )

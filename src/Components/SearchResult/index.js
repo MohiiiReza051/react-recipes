@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import RecipeList from '../RecipeList';
 import Loading from '../Loading';
+import Error from '../Error';
 
 const SearchResult = () => {
     const [isLoading, err, recipes] = useFetch('http://localhost:3000/recipes');
@@ -15,6 +16,7 @@ const SearchResult = () => {
                 Search results for the term "<em style={{ color: 'var(--black)' }}>{foodName}</em>":
             </h1>
             { isLoading && <Loading /> } 
+            { err && <Error /> } 
             { filteredRecipes && (<RecipeList recipes={filteredRecipes} />) }
         </>
     );

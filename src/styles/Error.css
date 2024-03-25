@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Courier New';
+    src: url(../fonts//cour.ttf);
+}
+.err-con {
+    max-width: 450px;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Courier New';
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 0.4);
+    z-index: 999;
+    background-color: #ffffff;
+}
+.err-con .title {
+    font-size: 100px;
+    color: #000000;
+}
+.err-con .what-happend {
+    color: rgb(104, 104, 104);
+    margin-top: -22px;
+    text-align: center;
+}
+.err-con .message {
+    text-align: center;
+    font-weight: bold;
+    color: rgba(1, 1, 1, 0.7);
+}
+.err-con .back-btn {
+    font-family: 'Overpass';
+    color: #ffffff;
+    background-color: rgba(44, 157, 205, 0.8);
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.err-con .back-btn:hover {
+    background-color: rgb(39, 169, 224);
+}
