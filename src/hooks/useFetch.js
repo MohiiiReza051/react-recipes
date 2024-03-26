@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 const useFetch = (url, method = 'GET') =>
 {
@@ -18,7 +18,7 @@ const useFetch = (url, method = 'GET') =>
     })
   }
   
-  const fetchData = useCallback(async (fetchOptions) =>
+  const fetchData = async (fetchOptions) =>
   {
     setIsLoading(true);
     try {
@@ -34,7 +34,7 @@ const useFetch = (url, method = 'GET') =>
       setErr(err.message)
     }
 
-  }, [])
+  }
   
   useEffect(() => {
     fetchData(method === 'POST' && options && options);

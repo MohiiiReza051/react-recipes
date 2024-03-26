@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme';
 import '../../styles/NavBar.css';
 
 const NavBar = () =>
 {
   const [searchValue, setSearchValue] = useState('');
   const navigate = useNavigate();
+
+  const { color } = useTheme();
 
   const handleSearchField = e =>
   {
@@ -16,7 +19,7 @@ const NavBar = () =>
   }
 
   return (
-    <div className='nav-con'>
+    <div className='nav-con' style={{ backgroundColor: color}}>
       <h1 className="page-title">
         <Link to={'/'}>
           MULTIX Food
