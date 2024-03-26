@@ -4,8 +4,6 @@ import '../../styles/RecipeList.css'
 
 const RecipeList = ({ recipes }) =>
 {  
-  const navigate = useNavigate();
-
   const { mode } = useTheme()
 
   const handleDeleteRecipe = async recipeId =>
@@ -43,4 +41,5 @@ const RecipeList = ({ recipes }) =>
     </div>
   )
 }
+
 export default RecipeList
