@@ -2,6 +2,7 @@ import { useFetch } from '../../hooks/useFetch';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Create.css';
+import { useTheme } from '../../hooks/useTheme';
 
 const Create = () =>
 {
@@ -12,6 +13,7 @@ const Create = () =>
   const [ isLoading, err, resJson, postData ] = useFetch("http://localhost:3000/recipes", 'POST');
   const ingredientsRef = useRef(null);
   const navigate = useNavigate();
+  const { mode } = useTheme();
 
   const handleSubmitForm = e =>
   {
@@ -50,7 +52,7 @@ const Create = () =>
   }, [isSend]);
   
   return (
-    <div className='create-con'>
+    <div className={`create-con ${mode === 'dark' && 'dark-mode'}`}>
       <h1 className='title'>Add A New Recipe</h1>
       <form onSubmit={e => handleSubmitForm(e)}>
         <label htmlFor="title">Recipe Title:</label>

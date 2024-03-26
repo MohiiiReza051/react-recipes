@@ -26,3 +26,12 @@
     font-size: 18px;
     text-align: justify;
 }
+.recipe-con.dark-mode {
+    background-color: #555;
+}
+.recipe-con.dark-mode h1,
+.recipe-con.dark-mode h2,
+.recipe-con.dark-mode ul,
+.recipe-con.dark-mode p {
+    color: var(--white);
+}

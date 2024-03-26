@@ -3,18 +3,20 @@ import { useFetch } from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom';
 import Loading from '../Loading';
 import Error from '../Error';
+import { useTheme } from '../../hooks/useTheme';
 
 const RecipeDetail = () =>
 {
   const { id } = useParams();
   const [ isLoading, err, recipe ] = useFetch(`http://localhost:3000/recipes/${id}`);
+  const { mode } = useTheme();
 
   return (
     <>
       { isLoading && <Loading /> } 
       { err && <Error /> } 
       {recipe && ( 
-        <div className='recipe-con'>
+        <div className={`recipe-con ${mode === 'dark' && 'dark-mode'}`}>
           <h1 className="title">
             {recipe.title}
           </h1>

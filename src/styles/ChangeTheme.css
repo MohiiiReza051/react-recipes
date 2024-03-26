@@ -5,19 +5,13 @@
     margin: 0 auto;
     margin-top: 20px;
 }
-.bx-moon {
+.moon {
     color: var(--black);
-    border: 1px solid var(--black);
-    border-radius: 3px;
-    padding: 2px;
-    font-size: 18px;
     transition: 0.4s;
     cursor: pointer;
 }
-.bx-moon:hover {
-    color: var(--white);
-    border: 1px solid var(--white);
-    background-color: var(--black);
+.moon:hover {
+    scale: 1.2;
 }
 .solid-circles {
     display: flex;

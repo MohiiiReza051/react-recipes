@@ -11,7 +11,16 @@
     padding: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     background-color: var(--white);
-    transition: 0.4s;
+    transition: 0.2s;
+}
+.recipes-list .dark-mode {
+    background-color: #555;
+}
+.recipes-list .dark-mode .bxs-trash,
+.recipes-list .dark-mode h2,
+.recipes-list .dark-mode h3,
+.recipes-list .dark-mode p {
+    color: #e4e4e4 !important;
 }
 .recipes-list .card:hover {
     rotate: 1deg;
@@ -23,7 +32,7 @@
 }
 .recipes-list .bxs-trash:hover {
     scale: 1.1;
-    color: #ff0000;
+    color: #ff0000 !important;
 }
 .recipes-list .card .title {
     color: #555;

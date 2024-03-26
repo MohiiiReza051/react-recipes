@@ -1,9 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom'
+import { useTheme } from '../../hooks/useTheme';
 import '../../styles/RecipeList.css'
 
 const RecipeList = ({ recipes }) =>
 {  
   const navigate = useNavigate();
+
+  const { mode } = useTheme()
 
   const handleDeleteRecipe = async recipeId =>
   {
@@ -19,7 +22,7 @@ const RecipeList = ({ recipes }) =>
   return (
     <div className="recipes-list">
       {recipes.map(r => (
-        <div className="card" key={r.id}>
+        <div className={`card ${mode === 'dark' && 'dark-mode'}`} key={r.id}>
           <i className='bx bxs-trash' onClick={() => handleDeleteRecipe(r.id)}></i>
           <h2 className="title">
             {r.title}

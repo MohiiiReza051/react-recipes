@@ -2,6 +2,11 @@
     max-width: 350px;
     margin: 40px auto;
 }
+.create-con.dark-mode h1,
+.create-con.dark-mode label,
+.create-con.dark-mode p {
+    color: var(--white);
+}
 .create-con .title {
     text-align: center;
     margin-bottom: 25px;
