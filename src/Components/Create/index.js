@@ -15,11 +15,11 @@ const Create = () =>
   const navigate = useNavigate();
   const { mode } = useTheme();
 
-  const handleSubmitForm = e =>
+  const handleSubmitForm = async e =>
   {
     e.preventDefault();
     if (ingredientsList.length > 0) {
-      postData(newRecipe);
+      await postData(newRecipe);
       setIsSend(true);
     }
   }

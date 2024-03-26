@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
 
 const ThemeContext = createContext();
 
@@ -12,10 +12,11 @@ const themeReducer = (state, action) => {
 }
 
 const ThemeProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(themeReducer, {
+    const initialState = JSON.parse(localStorage.getItem('themeState')) || {
         color: '#58249c',
         mode: 'light'
-    })
+    };
+    const [state, dispatch] = useReducer(themeReducer, initialState);
 
     const changeThemeColor = color => {
         dispatch({ type: 'CHANGE_COLOR', payload: color })
@@ -24,6 +25,10 @@ const ThemeProvider = ({ children }) => {
     const changeMode = mode => {
         dispatch({ type: 'CHANGE_MODE', payload: mode })
     }
+
+    useEffect(() => {
+        localStorage.setItem('themeState', JSON.stringify(state));
+    }, [state]);
 
     return (
         <ThemeContext.Provider value={{ ...state, changeThemeColor, changeMode }}>
