@@ -1,8 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme';
 import '../../styles/RecipeList.css'
 
-const RecipeList = ({ recipes }) =>
+const RecipeList = ({ recipes, setRecipeList }) =>
 {  
   const { mode } = useTheme()
 
@@ -14,7 +14,8 @@ const RecipeList = ({ recipes }) =>
           'Content-Type': 'application/json'
       }
     })
-    window.location.reload();
+    const newRecipeList = recipes.filter(r => r.id !== recipeId);
+    setRecipeList(newRecipeList);
   }
 
   return (

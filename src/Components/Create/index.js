@@ -1,8 +1,8 @@
+import { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch';
-import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/Create.css';
 import { useTheme } from '../../hooks/useTheme';
+import '../../styles/Create.css';
 
 const Create = () =>
 {
@@ -11,7 +11,6 @@ const Create = () =>
   const [ingredientsInputValue, setIngredientsInputValue] = useState('');
   const [isSend, setIsSend] = useState(false);
   const [ isLoading, err, resJson, postData ] = useFetch("http://localhost:3000/recipes", 'POST');
-  const ingredientsRef = useRef(null);
   const navigate = useNavigate();
   const { mode } = useTheme();
 
@@ -33,18 +32,11 @@ const Create = () =>
   
   const handleAddIngredient = () =>
   {
-    if (ingredientsRef.current && !ingredientsList.includes(ingredientsRef.current)) {
-      setIngredientsList([...ingredientsList, ingredientsRef.current]);
-      setNewRecipe({ ...newRecipe, ingredients: [...ingredientsList, ingredientsRef.current]});
-      ingredientsRef.current = '';
-      setIngredientsInputValue(ingredientsRef.current);
+    if (ingredientsInputValue && !ingredientsList.includes(ingredientsInputValue)) {
+      setIngredientsList([...ingredientsList, ingredientsInputValue]);
+      setNewRecipe({ ...newRecipe, ingredients: [...ingredientsList, ingredientsInputValue]});
+      setIngredientsInputValue('');
     }
-  }
-  
-  const handleOnInputIngredients = e =>
-  {
-    ingredientsRef.current = e.target.value;
-    setIngredientsInputValue(ingredientsRef.current);
   }
   
   useEffect(() => {
@@ -72,9 +64,8 @@ const Create = () =>
           type="text"
           className='recipe-ingredients'
           name='ingredients'
-          ref={ingredientsRef}
           value={ingredientsInputValue}
-          onInput={e => handleOnInputIngredients(e)}
+          onInput={e => setIngredientsInputValue(e.target.value)}
         />
         <input
           type="button"

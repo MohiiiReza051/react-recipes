@@ -1,16 +1,20 @@
 import { useFetch } from '../../hooks/useFetch';
 import { useTheme } from '../../hooks/useTheme';
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import RecipeList from '../RecipeList';
 import Loading from '../Loading';
 import Error from '../Error';
 
 const SearchResult = () => {
     const [isLoading, err, recipes] = useFetch('http://localhost:3000/recipes');
+    const [recipeList, setRecipeList] = useState([]);
     const { food: foodName } = useParams();
     const { mode } = useTheme();
   
-    const filteredRecipes = recipes ? recipes.filter(recipe => recipe.title.toLowerCase().includes(foodName.toLowerCase())) : [];
+    useEffect(() => {
+      recipes && setRecipeList(recipes.filter(recipe => recipe.title.toLowerCase().includes(foodName.toLowerCase())));
+    }, [recipes]);  
 
     return (
         <>
@@ -22,8 +26,8 @@ const SearchResult = () => {
             ) : err ? (
                 <Error />
             ) : (
-                filteredRecipes.length > 0 ?
-                <RecipeList recipes={filteredRecipes} /> :
+                recipeList.length > 0 ?
+                <RecipeList recipes={recipeList} setRecipeList={setRecipeList} /> :
                 <h2 className='nothing-found' style={{ textAlign: 'center', color: 'red' }}>
                     Nothing Found
                 </h2>
